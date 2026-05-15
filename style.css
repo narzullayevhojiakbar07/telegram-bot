@@ -1,72 +1,87 @@
 body {
-    background-color: #2E0249;
+    margin: 0;
+    font-family: sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    font-family: sans-serif;
+    background: radial-gradient(circle at top, #3b0a57, #120018);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .form {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 35px;
+    border-radius: 20px;
+    width: 340px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 300px;
+    gap: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-.form input {
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #b2b2c5;
-    font-family: monospace;
-    padding: 8px 0;
-    outline: none;
-    font-size: 16px;
-    color: #ffff;
-    transition: border-color 0.3s;
+.form h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 22px;
 }
 
-.form input:focus {
-    border-bottom: 2px solid white; 
+.form p {
+    color: #cfcfcf;
+    text-align: center;
+    font-size: 13px;
+    margin-top: -5px;
 }
 
-.btn {
-    margin-top: 10px;
+.form input,
+.form textarea {
     padding: 12px;
-    background-color: #8e1d71;
-    color: white;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn:hover {
-    background-color: #6a1555;
-    transform: translateY(-2px); 
-}
-
-.btn:active {
-    transform: scale(0.98);
-}
-
-.btn {
-    background-color: #a31a7e;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    background: rgba(255,255,255,0.12);
     color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 12px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    align-self: flex-end;
-    display: flex;
-    align-items: center;
-    gap: 10px;
     transition: 0.3s;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+    color: #ddd;
+}
+
+.form input:focus,
+.form textarea:focus {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.02);
+}
+
+.form textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ff2e88, #8e1d71);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 46, 136, 0.3);
 }
